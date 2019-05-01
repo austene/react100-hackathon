@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header style={headerStyle}>
-      <h1>Asteroids</h1>
+      <h1>Today's Asteroids</h1>
     </header>
   )
 }
