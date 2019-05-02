@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import './App.css';
 
-const apiKey = 'Zsl0orZshWx4DLZpHl4IEgnunl8GmRt79OumjMlz'
+const API_KEY = process.env.REACT_APP_NASA_API_KEY
 
 //Today's Date
 let today = new Date();
@@ -35,12 +35,12 @@ class App extends Component {
 
   componentDidMount() {
     //axios APOD call
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
       .then(res => this.setState({ APOD: res.data, APODhdurl: res.data.hdurl }))
       .catch(err => { console.log(err)});
 
     //axios asteroid approach call
-      axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.date}&end_date=${this.state.date}&api_key=${apiKey}`)
+      axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.date}&end_date=${this.state.date}&api_key=${API_KEY}`)
       .then(res => this.setState({ asteroids: res.data.near_earth_objects[this.state.date] }))
       .catch(err => { console.log(err)});
   }
