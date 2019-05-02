@@ -8,6 +8,9 @@ The APIs in this project include:
 
 ## Setup
 1. Clone respository
+```
+$ git clone https://github.com/austene/react100-hackathon
+```
 2. Install
 ```
 $ npm install
