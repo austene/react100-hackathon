@@ -4,7 +4,7 @@ import AsteroidInfo from '../AsteroidInfo';
 
 function Display(props) {
   return (
-    <div>
+    <div className='m-4'>
       {!props.idSelected 
       ? (<WelcomeView 
           APODhdurl={ props.APODhdurl }
@@ -18,6 +18,5 @@ function Display(props) {
     </div>
   )
 }
-
 
 export default Display;

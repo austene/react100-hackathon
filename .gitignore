@@ -24,3 +24,7 @@ yarn-error.log*
 
 # notes
 notes
+
+#Images
+/src/components/Image.js
+/src/images

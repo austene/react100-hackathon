@@ -13,26 +13,31 @@ class AsteroidInfo extends Component {
         selectedAsteroid = asteroidsArray[i];
       }
     }
-    console.log(JSON.stringify(selectedAsteroid));
     
     return(
       <div className='card'>
-        <div className='card-header'>{ selectedAsteroid.name }</div>
+        <div className='card-header'>Asteroid - { selectedAsteroid.name }</div>
         <div className='card-body'>
-          <h5 className='card-title'>Name: { selectedAsteroid.name }</h5>
-          <p className='card-text'>
-            <span>Approach Date: { selectedAsteroid.close_approach_data[0].close_approach_date }</span>
-            <br />
-            <span>Speed: { selectedAsteroid.close_approach_data[0].relative_velocity.miles_per_hour } miles per hour</span>
-            <br />
-            <span>Earth Miss Distance: { selectedAsteroid.close_approach_data[0].miss_distance.miles } miles</span>
-            <br />
-            <span>Hazardous asteroid:
-            {selectedAsteroid.is_potentially_hazardous_asteroid ? " Yes" : " Nope.  We're good...for now!" } </span>
-          </p>
-          <p>Add an a href if wanted!</p>
+          <h4 className='card-title'><u>Asteroid Statistics</u></h4>
+          <dl className='card-text row'>
+            <dt className='col-sm-3'>Approach Date</dt>
+            <dd className='col-sm-9'>{ selectedAsteroid.close_approach_data[0].close_approach_date }</dd>
+            <dt className='col-sm-3'>ID</dt>
+            <dd className='col-sm-9'>#{ selectedAsteroid.id }</dd>
+            <dt className='col-sm-3'>Speed</dt>
+            <dd className='col-sm-9'>{ selectedAsteroid.close_approach_data[0].relative_velocity.miles_per_hour } miles per hour</dd>
+            <dt className='col-sm-3'>Earth miss distance</dt>
+            <dd className='col-sm-9'>{ selectedAsteroid.close_approach_data[0].miss_distance.miles } miles</dd>
+            <dt className='col-sm-3'>Hazardous asteroid?</dt>
+            <dd className='col-sm-9'>{selectedAsteroid.is_potentially_hazardous_asteroid ? " Yes...uh-oh..." : " Nope.  We're good...for now!" }</dd>
+          </dl>
         </div>
-        <div className='card-footer'>ID: { selectedAsteroid.id }</div>
+        <div className='card-footer '>
+          <dl className='row'>
+            <dt className='col-sm-3'>What more details?</dt>
+            <dd classname='col-sm-9 text-primary'><a href={ selectedAsteroid.nasa_jpl_url }>Click Here</a></dd>
+          </dl>
+        </div>
       </div>
     )
   }

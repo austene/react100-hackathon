@@ -10,7 +10,6 @@ class AsteroidRow extends Component {
         onClick={ () => this.props.handleRowBtnClick (this.props.id) }  
       >
         <h5>Asteroid - {this.props.name}</h5>
-        <p>Date - {this.props.date}</p>
       </button>
     )
   }

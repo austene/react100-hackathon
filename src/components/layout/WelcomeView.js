@@ -1,20 +1,16 @@
 import React from 'react';
 
 function WelcomeView(props) {
-  console.log(props.APODhdurl);
-
   return (
     <div className='card'>
-      <div className='card-body'>
-        <p>Welcome to the Asteroid site!</p>
+      <div className='card-body text-center'>
+        <h3 className='font-weight-bold'>Welcome to Today's Asteroid site!</h3>
         <p>Please select an asteroid on the left.</p>
       </div>
       <img 
         src={props.APODhdurl} 
         className='card-img-top' 
-        alt="NASA's APOD" //replace with Astronomy Picture of the Day 
-        // defaultSource={'https://apod.nasa.gov/apod/ap190430.html'} 
-        defaultSource={require('../../images/M33Meteor_Chokshi_960.jpg')} 
+        alt="NASA's Astronomy Picture of the Day" //APOD 
       />
     </div>
   )
