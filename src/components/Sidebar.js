@@ -4,7 +4,6 @@ import AsteroidRow from './AsteroidRow';
 class Sidebar extends Component {
   
   render() {
-    console.log(this.props.asteroids);
     return(
       <div className='card m-4'>
         <div className='card-header'>
