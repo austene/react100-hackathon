@@ -35,7 +35,7 @@ class AsteroidInfo extends Component {
         <div className='card-footer '>
           <dl className='row'>
             <dt className='col-sm-3'>What more details?</dt>
-            <dd classname='col-sm-9 text-primary'><a href={ selectedAsteroid.nasa_jpl_url }>Click Here</a></dd>
+            <dd className='col-sm-9'><a className='text-primary' href={ selectedAsteroid.nasa_jpl_url }>Click Here</a></dd>
           </dl>
         </div>
       </div>
