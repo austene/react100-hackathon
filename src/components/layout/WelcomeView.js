@@ -10,7 +10,7 @@ function WelcomeView(props) {
       <img 
         src={props.APODhdurl} 
         className='card-img-top' 
-        alt="NASA's Astronomy Picture of the Day" //APOD 
+        alt="NASA's APOD" //Astronomy Picture of the Day
       />
     </div>
   )

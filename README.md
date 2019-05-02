@@ -1,3 +1,11 @@
+
+#React100-Hackathon App: Today's Asteroids
+This React App project allows users to see details about the asteroids that will pass earth today. 
+
+The APIs in this project include:
+- [NASA APOD](https://api.nasa.gov/api.html#apod)
+- [NASA Asteroids - NeoWs](https://api.nasa.gov/api.html#NeoWS)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +74,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+##Authors
+- Austen Eames - https://github.com/austene
